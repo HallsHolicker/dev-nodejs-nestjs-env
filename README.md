@@ -66,19 +66,21 @@ docker-compose -f docker-compose-debug.yml up --build -d
 docker-compose stop
 ```
 
-## 다중 프로젝트일 경우 
+---
+
+# 다중 프로젝트일 경우 
 
 다중 프로젝트를 생성했을 경우 프로젝트간 변경 방법
 
 docker-compose를 실행 할 때 다음 처럼 실행하면 됩니다.
 
-### 프로젝트 생성
+## 프로젝트 생성
 
 ```
 DEV={프로젝트명} docker-compose -f docker-compose-setup.yml up --build -d
 ```
 
-### Start , Dev, Debug
+## Start , Dev, Debug
 ```
 DEV={프로젝트명} docker-compose -f docker-compose{-dev/debug}.yml up --build -d
 ```
