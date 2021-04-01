@@ -15,12 +15,6 @@ node.js의 nestjs의 개발 환경을 Docker에서 하기 위해서 만든 docke
 DEV={프로젝트 명}
 ```
 
-`.vscode/launch.json`
-```
-"remoteRoot": "/app/{프로젝트 명}"
-```
-
-
 ```
 docker-compose -f docker-compose-setup.yml up --build -d
 ```
