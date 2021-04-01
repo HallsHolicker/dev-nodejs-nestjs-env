@@ -85,6 +85,8 @@ DEV={프로젝트명} docker-compose -f docker-compose-setup.yml up --build -d
 DEV={프로젝트명} docker-compose -f docker-compose{-dev/debug}.yml up --build -d
 ```
 
+---
+
 # 추가 npm 설치가 필요한 경우
 
 추가 plugin등의 설치가 필요한 경우 다음과 같이 진행하면 됩니다.
