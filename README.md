@@ -84,3 +84,33 @@ DEV={프로젝트명} docker-compose -f docker-compose-setup.yml up --build -d
 ```
 DEV={프로젝트명} docker-compose -f docker-compose{-dev/debug}.yml up --build -d
 ```
+
+# 추가 npm 설치가 필요한 경우
+
+추가 plugin등의 설치가 필요한 경우 다음과 같이 진행하면 됩니다.
+
+## Start 모드로 실행
+
+```
+docker-compose -f docker-compose.yml up --build -d
+```
+
+## Container ID 확인
+```
+docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                                            NAMES
+a5828eb25db3   dev-test_app   "docker-entrypoint.s…"   2 minutes ago   Up 8 seconds   0.0.0.0:3000->3000/tcp, 0.0.0.0:9229->9229/tcp   dev-test_app_1
+```
+
+## Container 접속
+
+```
+docker exec -it {CONTAINER ID} sh
+```
+
+## 개발 폴더 이동 후 필요 plugin 설치
+
+```
+cd /app/${DEV}
+npm install {plugin}
+```

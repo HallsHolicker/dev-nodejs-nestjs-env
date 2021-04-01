@@ -9,4 +9,6 @@ services:
       - "9229:9229"
     volumes:
       - .:/app
+    environment:
+      - DEV=${DEV}
     command: sh -c "cd /app/${DEV} && npm run start:debug"

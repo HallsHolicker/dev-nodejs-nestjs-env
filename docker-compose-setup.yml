@@ -6,4 +6,6 @@ services:
       dockerfile: ./Dockerfile
     volumes:
       - .:/app
+    environment:
+      - DEV=${DEV}
     command: sh -c "nest new ${DEV} -p npm --directory /${DEV} && sed -i 's/\-\-debug/\-\-debug 0.0.0.0/g' /app/${DEV}/package.json"
