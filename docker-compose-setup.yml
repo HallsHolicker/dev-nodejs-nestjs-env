@@ -1,0 +1,9 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/app
+    command: sh -c "nest new ${DEV} -p npm --directory /${DEV} && sed -i 's/\-\-debug/\-\-debug 0.0.0.0/g' /app/${DEV}/package.json"
