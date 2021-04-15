@@ -110,3 +110,9 @@ docker exec -it {CONTAINER ID} sh
 cd /app/${DEV}
 npm install {plugin}
 ```
+
+## 최초 생성일 경우
+
+```
+module_install.sh 수정
+```
